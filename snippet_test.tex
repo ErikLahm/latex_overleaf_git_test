@@ -1,5 +1,13 @@
 \documentclass{article}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
 
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./Figures/}{#1.pdf_tex}
+}
 
 \begin{document}
 First document. This is a simple example, with no 
@@ -43,5 +51,8 @@ $\alpha$. $a = \infty$. $ \infty $
 
 I can now write caption without problems. This is because the snippet cap is only executed in
 a math environment such as here \(\cap \) 
+
+This is a test for inkscape:
+
 
 \end{document}
