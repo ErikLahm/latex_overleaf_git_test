@@ -3,10 +3,11 @@
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
+\usepackage{graphicx}
 
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
-    \import{./Figures/}{#1.pdf_tex}
+    \import{./figures/}{#1.pdf_tex}
 }
 
 \begin{document}
@@ -54,5 +55,11 @@ a math environment such as here \(\cap \)
 
 This is a test for inkscape:
 
+\begin{figure}[h]
+    \centering
+    \incfig{test-pic}
+    \caption{title}
+    \label{fig:test-pic}
+\end{figure}
 
 \end{document}
